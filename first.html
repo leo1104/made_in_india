@@ -12,7 +12,15 @@
 
     <title>HANDY||OFFICIAL SITE</title>
     <link rel="stylesheet" href="first.css">
+    <script>
+        function showpag() {
+            var sel = document.getElementById("link");
+            var option = sel.options[sel.selectedIndex].value;
+            window.open(option,"")
 
+        }
+
+    </script>
 </head>
 
 <body>
@@ -20,7 +28,7 @@
     <span></span>
     <div class="container d-flex align-items-center justify-content-center">
 
-        <form class="centered mg-auto" id="link">
+        <form class="centered mg-auto" >
             <div class="form-group">
                 <label for="exampleInputEmail1 ">Name</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -29,27 +37,20 @@
             <div class="form-group">
                 <label for="exampleInputPassword1">CHOOSE YOUR SHOP</label>
                 <div class="form-group">
-                    <select class="form-control" id="sel1">
-                        <option></option>
-                        <option id="op1"value="index.html">more</option>
-                        <option>BIG BAZAR</option>
+                    <select class="form-control" id="link">
+                        <option value="not"></option>
+                        <option id="op1" value="index.html">more</option>
+                        <option value="test.html">BIG BAZAR</option>
                         <option>STATIONARY</option>
                         <option>RATION</option>
                     </select>
                 </div>
             </div>
-            <button type="submit" id="submit" class="btn btn-primary" onclick="">SEARCH PRODUCTS</button>
+            <button type="submit" id="submit" class="btn btn-primary" onclick="showpag()">SEARCH PRODUCTS</button>
         </form>
     </div>
 
-    <script>
-        var sel=document.getElementById("link");
-        var op=document.getElementById("op1")
-
-        if (sel==op){
-            href="index.html";
-        }
-    </script>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -62,7 +63,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    
+
 </body>
 
 </html>
