@@ -19,25 +19,31 @@
             window.open(option,"")
 
         }
-
     </script>
+   
+
 </head>
 
 <body>
-    <h1>MORE SUPERMARKET</h1>
+    <div class="text-center">
+        <img src="videos.jpg" class="rounded" alt="" height="200" width="200">
+      </div>
+      <br><br>
+    <h1>HANDY OFFICIAL</h1>
+    <br><br>
     <span></span>
     <div class="container d-flex align-items-center justify-content-center">
 
-        <form class="centered mg-auto" >
+        <form class="centered mg-auto" id="form1">
             <div class="form-group">
                 <label for="exampleInputEmail1 ">Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                 <small id="emailHelp" class="form-text text-muted">Please share your name for further reciept</small>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">CHOOSE YOUR SHOP</label>
                 <div class="form-group">
-                    <select class="form-control" id="link">
+                    <select class="form-control" id="link" disabled="disabled">
                         <option value="not"></option>
                         <option id="op1" value="more.html">MORE SUPERMARKET</option>
                         <option value="test.html">BIG BAZAR</option>
@@ -50,7 +56,17 @@
         </form>
     </div>
 
-    
+    <script>
+        form1.addEventListener('input',() =>{
+            if(exampleInputEmail1.value.length >3){
+                link.removeAttribute('disabled');
+                }
+            else{
+                link.setAttribute('disabled','disabled');
+            }    
+
+        });
+    </script>   
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
